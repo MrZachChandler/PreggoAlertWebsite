@@ -1,0 +1,175 @@
+<html class=""><head><script src="//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js"></script><script src="//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js"></script><script src="//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/nariman_adam/pen/QNQbXv">
+
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style class="cp-pen-styles">* {
+  box-sizing: border-box;
+}
+
+body {
+  /*overflow: hidden;*/
+}
+
+.car-container {
+  width: 200px;
+  position: absolute;
+  right: -10%;
+  margin-top: 150px;
+  -webkit-animation: move 6s linear infinite;
+          animation: move 6s linear infinite;
+}
+.car-container .upper-body {
+  background: #52b3d9;
+  height: 26px;
+  width: 70px;
+  padding: 7px;
+  padding-bottom: 0;
+  margin: auto;
+  margin-left: 21px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  -ms-transform: skew(-10deg);
+  /* IE 9 */
+  -webkit-transform: skew(-10deg);
+}
+.car-container .upper-body .inner-upper {
+  background: #fff;
+  height: 100%;
+  width: 50%;
+}
+.car-container .inner-left-upper {
+  float: left;
+  border-top-left-radius: 40px;
+  border-right: 5px solid #52B3D9;
+}
+.car-container .inner-right-upper {
+  float: right;
+  border-top-right-radius: 40px;
+}
+.car-container .car-body {
+  background: #52B3D9;
+  height: 27px;
+  width: 97px;
+  border-radius: 50px 20px 20px 50px;
+  position: relative;
+}
+.car-container .wheel {
+  background: -webkit-gradient(left top, right top, color-stop(0%, #8a8686), color-stop(0%, #e73827), color-stop(0%, #f02f17), color-stop(0%, #757575), color-stop(89%, black), color-stop(100%, black));
+  background: -webkit-linear-gradient(left, #8a8686 0%, #e73827 0%, #f02f17 0%, #757575 0%, black 89%, black 100%);
+  background: linear-gradient(to right, #8a8686 0%, #e73827 0%, #f02f17 0%, #757575 0%, black 89%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a8686', endColorstr='#000000', GradientType=1 );
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  -webkit-animation: rotateAnimation 0.3s ease-in-out infinite;
+          animation: rotateAnimation 0.3s ease-in-out infinite;
+}
+.car-container .wheel .inner-wheel {
+  background: #fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.car-container .left-wheel {
+  left: 18px;
+}
+.car-container .right-wheel {
+  right: 10px;
+}
+
+@-webkit-keyframes rotateAnimation {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes move {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 100%;
+  }
+}
+@keyframes move {
+  from {
+    right: -10%;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+.area {
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #B54B8D;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 10px #B54B8D,
+      0px 0px 10px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 25px #B54B8D,
+      0px 0px 50px #B54B8D,
+      0px 0px 50px #B54B8D,
+      0px 0px 50px #B54B8D,
+      0px 0px 150px #B54B8D,
+      0px 10px 100px #B54B8D,
+      0px 10px 100px #B54B8D,
+      0px 10px 100px #B54B8D,
+      0px 10px 100px #B54B8D,
+      0px -10px 100px #B54B8D,
+      0px -10px 100px #B54B8D;
+  }
+}
+</style></head><body>
+<div class="car-container">
+
+  <span style="font-size:20px;color:#B54B8D;"><span style="color:white;">____</span><span class="area">⚠</span></span>
+    <div class="upper-body">
+      <div class="inner-upper inner-left-upper"></div>
+      <div class="inner-upper inner-right-upper"></div>
+    </div>
+    <div class="car-body">
+      <div class="wheel left-wheel">
+        <div class="inner-wheel"></div>
+      </div>
+      <div class="wheel right-wheel">
+        <div class="inner-wheel"></div>
+      </div>
+    </div>
+  </div>
+
+</body></html>
